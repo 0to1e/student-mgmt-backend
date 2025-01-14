@@ -14,7 +14,7 @@ app.use("/batch", batchRoutes);
 app.use("/course", courseRoutes);
 
 try {
-  mongoose.connect("mongodb://localhost:27017/student-mgmt-db").then(() => {
+  mongoose.connect(`${process.env.MONGO_URI}`).then(() => {
     app.listen(process.env.PORT, () => {
       console.log(`Listening on PORT ${process.env.PORT}`);
     });
