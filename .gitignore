@@ -1,5 +1,5 @@
 package.json
 pnpm-lock.yaml
 
-node-modules/
+node_modules/
 .env
